@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.objective {
+  background-color: rgb(245, 245, 245);
+  padding: 2em;
+  max-width: 800px;
+  margin: auto;
+}
+.name {
+  font-size: 3em;
+  padding-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(34, 52, 99, 0.7), 0 0 5px rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+p {
+  border: 1px solid #ddd;
+  font-size: 1.5rem;
+  padding: 1em;
+  margin-top: 1em;
+  line-height: 1.6;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+p:hover {
+  box-shadow: 5px 0px 25px rgba(34, 52, 99, 0.7);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 80px;
+}
+.container div {
+  padding: 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  transform-origin: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+.a {
+  transform: rotate(-10deg) skew(-5deg);
+}
+.b {
+  transform: rotate(10deg) skew(5deg);
+}
+.c {
+  transform: rotate(-10deg) skew(-5deg);
+}
+.d {
+  transform: rotate(10deg) skew(5deg);
+}
+.e {
+  transform: rotate(-10deg) skew(-5deg);
+}
+.container div:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
+}
+
+.boxcontainer {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.box1,
+.box2 {
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  width: 220px;
+  height: 220px;
+  background-color: #00bfff;
+  border-radius: 30px;
+  border: solid #0056b3 4px;
+  transition: transform 3s, background-color 3s, opacity 3s, color 3s;
+}
+.box1:hover,
+.box2:hover {
+  transform: rotateZ(60deg);
+  background-color: #ff4500;
+  opacity: 0.8;
+  color: white;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(850px, 80px, 80px);
+  }
+}
+
+#ball {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgb(230, 230, 250);
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: bounce 5s linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
